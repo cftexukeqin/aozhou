@@ -1,0 +1,321 @@
+﻿{% load  static %}
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>Shop</title>
+
+	<link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css'%}" type="text/css" media="all">
+	<link rel="stylesheet" href="{% static 'src/css/font-awesome.min.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'src/css/ionicons.min.css' %}" type="text/css" media="all" />
+	<link rel="stylesheet" href="{% static 'src/css/owl.carousel.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" href="{% static 'src/css/owl.theme.css' %}" type="text/css" media="all">
+	<link rel='stylesheet' href="{% static 'src/css/prettyPhoto.css' %}" type='text/css' media='all'>
+	<link rel="stylesheet" href="{% static 'src/css/style.css' %}" type="text/css" media="all">
+	<link rel="stylesheet" href="{% static 'src/css/custom.css' %}" type="text/css" media="all">
+	{#<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">#}
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+	<script>
+		window.onload = function () {
+			var mobileService = document.getElementById("mobile-search");
+			var is_mobi = navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i) != null;
+			if (is_mobi) {
+				mobileService.style.display = "block";
+			} else {
+				mobileService.style.display = "none";
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+	<div class="noo-spinner">
+		<div class="spinner">
+			<div class="cube1"></div>
+			<div class="cube2"></div>
+		</div>
+
+	</div>
+	{% include 'nav.html' %}
+	<div id="menu-slideout" class="slideout-menu hidden-md-up">
+		<div class="mobile-menu">
+			<ul id="mobile-menu" class="menu">
+				<li><a href="{% url 'goods:index' %}">首页</a></li>
+				<li><a href="{% url 'goods:lists' %}">商品</a></li>
+				<li><a href="{% url 'operation:fav_list' %}">购物车</a></li>
+				<li><a href="{% url 'goods:about' %}">关于网站</a></li>
+				{#                                <li><a href="checkout.html">Checkout</a></li>#}
+				{#                                <li><a href="contact-us.html">Contact</a></li>#}
+				{% if user.is_authenticated %}
+				<li><a href="">{{ user.username }}</a></li>
+				<li><a href="{% url 'users:logout' %}">Logout</a></li>
+				{% else %}
+				<li><a href="{% url 'users:login' %}">Login</a></li>
+				<li><a href="{% url 'users:regist' %}">Regist</a></li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+	<div class="site">
+		{% include 'header.html' %}
+		{% include 'mobile_header.html' %}
+		<div id="main">
+			<div class="section section-bg-10 pt-11 pb-17">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h2 class="page-title text-center">Shop</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section border-bottom pt-2 pb-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<ul class="breadcrumbs">
+								<li><a href="/">首页</a></li>
+								<li><a href=" {% url 'goods:lists' %}">商品</a></li>
+								<li>产品列表</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section pt-7 pb-7">
+				<div class="container">
+					<div class="row">
+					<div class="col-md-9 col-md-push-3">
+						<div class="shop-filter">
+{#							<div class="col-md-6">#}
+{#								<p class="result-count">搜索到{{ goodses.count }}个结果</p>#}
+{#							</div>#}
+							<div class="col-md-6">
+								<div class="shop-filter-right">
+{#									<div class="switch-view">#}
+{#										<a href="{% url 'goods:lists' %}" class="switcher" data-toggle="tooltip" data-placement="top" title="" data-original-title="List"><i class="ion-navicon"></i></a>#}
+{#										<a href="../goods_list.html" class="switcher active" data-toggle="tooltip" data-placement="top" title="" data-original-title="Grid"><i class="ion-grid"></i></a>#}
+{#									</div>#}
+
+{#									<form class="commerce-ordering">#}
+{#										<select name="orderby" class="orderby">#}
+{#											<option value="">Sort by popularity</option>#}
+{#											<option value="">Sort by average rating</option>#}
+{#											<option value="" selected="selected">Sort by newness</option>#}
+{#											<option value="">Sort by price: low to high</option>#}
+{#											<option value="">Sort by price: high to low</option>#}
+{#										</select>#}
+{#									</form>#}
+                                    <div id="mobile-search" class="widget widget-product-search" style="display:none">
+                                        <form class="form-search" action="/search/">
+                                            <input type="text" class="search-field" placeholder="Search products…" value="{{ query }}" name="q"/>
+                                            <input type="submit" value="Search"/>
+                                        </form>
+                                    </div>
+								</div>
+							</div>
+						</div>
+                        <div class="category-carousel-2 mb-3" data-auto-play="true" data-desktop="3" data-laptop="3" data-tablet="2" data-mobile="1">
+							<div class="cat-item">
+								<div class="cats-wrap" data-bg-color="#f8c9c2">
+									<a href="#">
+										<img src="{% static 'images/category/cate_7.png' %}" alt="" />
+										<h2 class="category-title">
+											特色美食 <mark class="count">{{ special_goods.count }}</mark>
+										</h2>
+									</a>
+								</div>
+							</div>
+							<div class="cat-item">
+								<div class="cats-wrap" data-bg-color="#ebd3c3">
+									<a href="#">
+										<img src="{% static 'images/category/cate_5.png' %}" alt="" />
+										<h2 class="category-title">
+											美妆洗护 <mark class="count">{{ cosmetics_goods.count }}</mark>
+										</h2>
+									</a>
+								</div>
+							</div>
+							<div class="cat-item">
+								<div class="cats-wrap" data-bg-color="#c6e6f6">
+									<a href="#">
+										<img src="{% static 'images/category/cate_9.png' %}" alt="" />
+										<h2 class="category-title">
+											澳洲奶粉 <mark class="count">{{ milk_goods.count }}</mark>
+										</h2>
+									</a>
+								</div>
+							</div>
+							<div class="cat-item">
+								<div class="cats-wrap" data-bg-color="#e0d1a1">
+									<a href="#">
+										<img src="{% static 'images/category/cate_6.png' %}" alt="" />
+										<h2 class="category-title">
+											母婴儿童 <mark class="count">{{ love_goods.count }}</mark>
+										</h2>
+									</a>
+								</div>
+							</div>
+                            <div class="cat-item">
+								<div class="cats-wrap" data-bg-color="#e0d1a1">
+									<a href="#">
+										<img src="{% static 'images/category/cate_6.png' %}" alt="" />
+										<h2 class="category-title">
+											保健产品 <mark class="count">{{ care_goods.count }}</mark>
+										</h2>
+									</a>
+								</div>
+							</div>
+						</div>
+                        <div class="product-grid">
+                            {% for goods in goodses %}
+                            <div class="col-md-4 col-sm-6 product-item text-center mb-3">
+                                        <div class="product-thumb">
+                                            <a href="{% url 'goods:goods_detail' goods.id %}">
+                                                <div class="badges">
+                                                    <span class="hot">Hot</span>
+                                                    <span class="onsale">Sale!</span>
+                                                </div>
+                                                <img class="goods_img" src="{{ goods.goods_thumbnail }}" alt=""/>
+                                            </a>
+                                            <div class="product-action">
+										<span class="add-to-cart">
+											<a href="#" data-toggle="tooltip" data-placement="top"
+                                               title="Add to cart"></a>
+										</span>
+                                                <span class="wishlist">
+											<a href="#" data-toggle="tooltip" data-placement="top"
+                                               title="Add to wishlist"></a>
+										</span>
+                                                <span class="quickview">
+											<a href="#" data-toggle="tooltip" data-placement="top"
+                                               title="Quickview"></a>
+										</span>
+                                                <span class="compare">
+											<a href="#" data-toggle="tooltip" data-placement="top" title="Compare"></a>
+										</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="{% url 'goods:goods_detail' goods.id %}">
+                                                <h2 class="title">{{ goods.name|truncatechars:20 }}</h2>
+                                                <span class="price">
+											<del>{{ goods.market_price }}</del>
+											<ins>{{ goods.shop_price }}</ins>
+										</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                            {% endfor %}
+                        </div>
+						<div class="pagination">
+{#                        上一页#}
+							{% if goodses.has_previous %}
+                                <a class="prev page-numbers" href="{% url 'goods:lists' %}?page={{ goodses.previous_page_number }}">Prev</a>
+                                {% else %}
+                                <a class="prev page-numbers disabled"  href="javascript:void(0)">Prev</a>
+							{% endif %}
+{#                            左边页#}
+                            {% if left_has_more %}
+                                <a class="page-numbers" href="{% url 'goods:lists' %}?page=1">1</a>
+                                <a class="page-numbers" href="javascript:void(0)">...</a>
+                            {% endif %}
+
+                            {% for left_page in left_pages %}
+                                <a class="page-numbers" href="{% url 'goods:lists' %}?page={{ left_page }}">{{ left_page }}</a>
+                            {% endfor %}
+{#                            中间页#}
+                            <a class="page-numbers current" href="{% url 'goods:lists' %}?page={{ current_page }}">{{ current_page }}</a>
+                            {# 右边的页数 #}
+                            {% for right_page in right_pages %}
+                                <a class="page-numbers" href="{% url 'goods:lists' %}?page={{ right_page }}">{{ right_page }}</a>
+                            {% endfor %}
+                            {% if right_has_more %}
+                                <a class="page-numbers" href="javascript:void(0)">...</a>
+                                <a class="page-numbers" href="{% url 'goods:lists' %}?page={{ num_pages }}">{{ num_pages }}</a>
+                            {% endif %}
+
+{#                        下一页#}
+							{% if goodses.has_next %}
+                                <a class="next page-numbers" href="{% url 'goods:lists' %}?page={{ goodses.next_page_number }}">Next</a>
+                                {% else %}
+                                <a class="next disabled"  href="javascript:void(0)">Next</a>
+							{% endif %}
+						</div>
+					</div>
+					<div class="col-md-3 col-md-pull-9">
+						<div class="sidebar">
+							<div class="widget widget-product-search">
+								<form class="form-search" action="/search/">
+									<input type="text" class="search-field" placeholder="Search products…" value="" name="q" />
+									<input type="submit"  value="Search" />
+								</form>
+							</div>
+							<div class="widget widget_price_filter">
+								<h3 class="widget-title">Filter by price</h3>
+								<div class="price_slider_wrapper">
+									<div class="price_slider" style="display:none;"></div>
+									<div class="price_slider_amount">
+										<input type="text" id="min_price" name="min_price" value="" data-min="0" placeholder="Min price">
+										<input type="text" id="max_price" name="max_price" value="" data-max="150" placeholder="Max price">
+										<button type="submit" class="button">Filter</button>
+										<div class="price_label" style="display:none;">
+											Price: <span class="from"></span> &mdash; <span class="to"></span>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+                            {% include 'hot_goods_sidebar.html' with title="热门商品" %}
+						</div>
+					</div>
+					</div>
+				</div>
+		</div>
+		{% include 'footer_marco.html' %}
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						Copyright &copy; 2017.Company name All rights reserved.<a target="_blank"
+							href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+					</div>
+					<div class="col-md-4">
+						<img src="{% static 'images/footer_payment.png' %}" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="backtotop" id="backtotop"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{% static 'src/js/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/jquery-migrate.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/modernizr-2.7.1.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/jquery.countdown.min.js' %}"></script>
+	<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.js' %}"></script>
+	<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.init.min.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'src/js/script.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'src/js/core.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/widget.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/mouse.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/slider.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/jquery.ui.touch-punch.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/price-slider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/dxajax.js' %}"></script>
+	<script type="text/javascript" src="{% static 'src/js/goods_lists.js' %}"></script>
+</body>
+
+</html>

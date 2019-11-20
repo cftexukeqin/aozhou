@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}
+    
+    {% endblock %}|佳佳的店</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static "src/css/bootstrap.min.css" %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static "src/css/font-awesome.min.css" %}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{% static 'src/css/ionicons.min.css' %}" type="text/css" media="all"/>
+    <link rel="stylesheet" href="{% static 'src/css/owl.carousel.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'src/css/owl.theme.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'src/css/settings.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'src/css/style.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'src/css/custom.css' %}" type="text/css" media="all">
+    <link href="{% static 'src/css/login_style.css' %}" rel='stylesheet' type='text/css'/>
+{#    <link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i"#}
+{#          rel="stylesheet">#}
+    {#<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>#}
+    <meta name="keywords"
+          content="Flat Dark Web Login Form Responsive Templates, Iphone Widget Template, Smartphone login forms,Login form, Widget Template, Responsive Templates, a Ipad 404 Templates, Flat Responsive Templates"/>
+
+    <!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script src="{% static 'src/js/jquery.min.js' %}"></script>
+    <script src="{% static 'src/js/dxajax.js' %}"></script>
+    <script src="{% static 'src/js/auzhou_auth.js' %}"></script>
+</head>
+<body>
+<!--SIGN UP-->
+{#{% include 'header.html' %}#}
+{#{% include 'mobile_header.html' %}#}
+<h1>佳有好货</h1>
+{% block container %}{% endblock %}
+<div class="copy-rights">
+    <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/"></a>
+    </p>
+</div>
+
+</body>
+</html>

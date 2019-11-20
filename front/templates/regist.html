@@ -1,0 +1,37 @@
+{% extends 'auth_base.html' %}
+{% load static %}
+{% block title %}
+Regist
+{% endblock %}
+{% block container %}
+<div class="login-form">
+    {#    <div class="close"></div>#}
+    <div class="head-info">
+        <div class="index-link">
+            <span><a href="/">首页</a></span>
+            <span><a href="{% url 'users:login' %}">去登陆-></a></span>
+        </div>
+        <label class="lbl-1"> </label>
+        <label class="lbl-2"> </label>
+        <label class="lbl-3"> </label>
+    </div>
+    <div class="clear"></div>
+    <div class="avtar">
+        <img src="{% static 'images/avtar.png' %}"/>
+    </div>
+    <form>
+        <input type="text" class="text" name="telephone" placeholder="Username">
+        <input style="margin-bottom: 0px" type="password" name="pwd1"  onfocus="this.value = '';"
+               onblur="if (this.value == '') {this.value = '请输入6位密码';}">
+        <div class="key">
+            <input type="password" name="pwd2"  onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = '请再次确认密码';}">
+
+        </div>
+    </form>
+
+    <div class="signup">
+        <input type="submit" id="regist" value="Regist">
+    </div>
+</div>
+{% endblock %}

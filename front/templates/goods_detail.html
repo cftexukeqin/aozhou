@@ -1,0 +1,450 @@
+﻿{% load  static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>{{ goods.name }}--商品详情</title>
+
+<link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/font-awesome.min.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'src/css/ionicons.min.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'src/css/owl.carousel.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/owl.theme.css' %}" type="text/css" media="all">
+<link rel='stylesheet' href="{% static 'src/css/prettyPhoto.css' %}" type='text/css' media='all'>
+<link rel='stylesheet' href="{% static 'src/css/slick.css' %}" type='text/css' media='all'>
+<link rel="stylesheet" href="{% static 'src/css/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/custom.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/js/sweetalert/sweetalert.css' %}" type="text/css" media="all">
+{#<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">#}
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="noo-spinner">
+	<div class="spinner">
+		<div class="cube1"></div>
+		<div class="cube2"></div>
+	</div>
+</div>
+{% include 'nav.html' %}
+<div class="site">
+    {% include 'header.html' %}
+    {% include 'mobile_header.html' %}
+	<div id="main">
+		<div class="section section-bg-10 pt-11 pb-17">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="page-title text-center">Shop Detail</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section border-bottom pt-2 pb-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="breadcrumbs">
+							<li><a href="/">首页</a></li>
+							<li><a href="{% url 'goods:lists' %}">商品列表</a></li>
+							<li>商品详情</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section pt-7 pb-7">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 col-md-push-3">
+						<div class="single-product">
+							<div class="col-md-6">
+								<div class="image-gallery">
+									<div class="image-gallery-inner">
+										<div>
+                                            <div class="image-thumb">
+                                                <a href="{{ goods.goods_thumbnail }}" data-rel="prettyPhoto[gallery]">
+                                                    <img src="{{ goods.goods_thumbnail }}" alt=""/>
+                                                </a>
+                                            </div>
+										</div>
+										<div>
+											<div class="image-thumb">
+												<a href="{% static 'images/shop/large/shop_2.jpg' %}" data-rel="prettyPhoto[gallery]">
+													<img src="{% static 'images/shop/shop_3.jpg' %}" alt="" />
+												</a>
+											</div>
+										</div>
+										<div>
+											<div class="image-thumb">
+												<a href="{% static 'images/shop/large/shop_3.jpg' %}" data-rel="prettyPhoto[gallery]">
+													<img src="{% static 'images/shop/shop_4.jpg' %}" alt="" />
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="image-gallery-nav">
+                                    {% for image in goods.images.all %}
+                                        <div class="image-nav-item">
+                                            <div class="image-thumb">
+                                                <img src="{{ image.image }}" alt=""/>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+									<div class="image-nav-item">
+										<div class="image-thumb">
+											<img src="{% static 'images/shop/thumb/shop_3.jpg' %}" alt="" />
+										</div>
+									</div>
+									<div class="image-nav-item">
+										<div class="image-thumb">
+											<img src="{% static 'images/shop/thumb/shop_4.jpg' %}" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="summary">
+									<h1 class="product-title">{{ goods.name }}</h1>
+									<div class="product-rating">
+										<div class="star-rating">
+											<span style="width:100%"></span>
+										</div>
+										<i>(2 customer reviews)</i>
+									</div>
+									<div class="product-price">
+										<del>原价：{{ goods.shop_price }}</del>
+										<ins>惊喜价：{{ goods.market_price }}元</ins>
+									</div>
+									<div class="mb-3 goods-info-nums">
+                                        <span>销量：{{ goods.sold_num }}</span>
+                                        <span>收藏数：{{ goods.fav_num }}</span>
+									</div>
+									<form class="cart">
+										<div class="quantity-chooser">
+											<div class="quantity">
+												<span class="qty-minus" data-min="1"><i class="ion-ios-minus-outline"></i></span>
+												<input type="text" name="quantity" value="1" title="Qty" class="input-text qty text" size="4">
+												<span class="qty-plus" data-max=""><i class="ion-ios-plus-outline"></i></span>
+											</div>
+										</div>
+										<button type="submit" id="user-fav" data-goods-id="{{ goods.id }}" class="single-add-to-cart">ADD TO CART</button>
+									</form>
+									<div class="product-tool">
+										<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"> Browse Wishlist </a>
+										<a class="compare" href="#" data-toggle="tooltip" data-placement="top" title="Add to compare"> Compare </a>
+									</div>
+									<div class="product-meta">
+										<table>
+											<tbody>
+												<tr>
+													<td class="label">Category</td>
+													<td><a href="#">{{ goods.category }}</a></td>
+												</tr>
+												<tr>
+													<td class="label">Share</td>
+													<td class="share">
+														<a target="_blank" href="#"><i class="fa fa-facebook"></i></a> 
+														<a target="_blank" href="#"><i class="fa fa-twitter"></i></a> 
+														<a target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="commerce-tabs tabs classic">
+									<ul class="nav nav-tabs tabs">
+										<li class="active">
+											<a data-toggle="tab" href="#tab-description" aria-expanded="true">Description</a>
+										</li>
+										<li class="">
+											<a data-toggle="tab" href="#tab-reviews" aria-expanded="false">Reviews</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane fade active in" id="tab-description">
+	                                        {{ goods.goods_desc|safe }}
+										</div>
+										<div id="tab-reviews" class="tab-pane fade">
+											<div class="single-comments-list mt-0">
+												<div class="mb-2">
+													<h2 class="comment-title">2 reviews for Orange Juice</h2>
+												</div>
+												<ul class="comment-list">
+													<li>
+														<div class="comment-container">
+															<div class="comment-author-vcard">
+																<img alt="" src="{% static 'images/avatar/avatar.pngfooter' %}" />
+															</div>
+															<div class="comment-author-info">
+																<span class="comment-author-name">admin</span>
+																<a href="#" class="comment-date">July 27, 2016</a>
+																<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+															</div>
+															<div class="reply">
+																<a class="comment-reply-link" href="#">Reply</a>
+															</div>
+														</div>
+														<ul class="children">
+															<li>
+																<div class="comment-container">
+																	<div class="comment-author-vcard">
+																		<img alt="" src="{% static 'images/avatar/avatar.png' %}" />
+																	</div>
+																	<div class="comment-author-info">
+																		<span class="comment-author-name">admin</span>
+																		<a href="#" class="comment-date">July 27, 2016</a>
+																		<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+																	</div>
+																	<div class="reply">
+																		<a class="comment-reply-link" href="#">Reply</a>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<div class="comment-container">
+															<div class="comment-author-vcard">
+																<img alt="" src="{% static 'images/avatar/avatar.png' %}" />
+															</div>
+															<div class="comment-author-info">
+																<span class="comment-author-name">admin</span>
+																<a href="#" class="comment-date">July 27, 2016</a>
+																<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+															</div>
+															<div class="reply">
+																<a class="comment-reply-link" href="#">Reply</a>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="single-comment-form mt-0">
+												<div class="mb-2">
+													<h2 class="comment-title">LEAVE A REPLY</h2>
+												</div>
+												<form class="comment-form">
+													<div class="row">
+														<div class="col-md-12">
+															<textarea id="comment" name="comment" cols="45" rows="5" placeholder="Message *"></textarea>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-4">
+															<input id="author" name="author" type="text" value="" size="30" placeholder="Name *" class="mb-2">
+														</div>
+														<div class="col-md-4">
+															<input id="email" name="email" type="email" value="" size="30" placeholder="Email *" class="mb-2">
+														</div>
+														<div class="col-md-4">
+															<input id="url" name="url" type="text" value="" placeholder="Website">
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-2">
+															<input name="submit" type="submit" id="submit" class="btn btn-alt btn-border" value="Submit">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="related">
+									<div class="related-title">
+										<div class="text-center mb-1 section-pretitle fz-34">Related</div>
+										<h2 class="text-center section-title mtn-2 fz-24">Products</h2>
+									</div>
+									<div class="product-carousel p-0" data-auto-play="true" data-desktop="3" data-laptop="2" data-tablet="2" data-mobile="1">
+										<div class="product-item text-center">
+											<div class="product-thumb">
+												<a href="goods_detail.html">
+													<div class="badges">
+														<span class="hot">Hot</span>
+													</div>
+													<img src="{% static 'images/shop/shop_5.jpg' %}" alt="" />
+												</a>
+												<div class="product-action">
+													<span class="add-to-cart">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+													</span>
+													<span class="wishlist">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a>
+													</span>
+													<span class="quickview">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Quickview"></a>
+													</span>
+													<span class="compare">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Compare"></a>
+													</span>
+												</div>
+											</div>
+											<div class="product-info">
+												<a href="goods_detail.html">
+													<h2 class="title">Carrot</h2>
+													<span class="price">$12.00</span>
+												</a>
+											</div>
+										</div>
+										<div class="product-item text-center">
+											<div class="product-thumb">
+												<a href="goods_detail.html">
+													<span class="outofstock"><span>Out</span>of stock</span>
+													<img src="{% static 'images/shop/shop_6.jpg' %}" alt="" />
+												</a>
+												<div class="product-action">
+													<span class="add-to-cart">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+													</span>
+													<span class="wishlist">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a>
+													</span>
+													<span class="quickview">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Quickview"></a>
+													</span>
+													<span class="compare">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Compare"></a>
+													</span>
+												</div>
+											</div>
+											<div class="product-info">
+												<a href="goods_detail.html">
+													<h2 class="title">Sprouting Broccoli</h2>
+													<span class="price">$6.00</span>
+												</a>
+											</div>
+										</div>
+										<div class="product-item text-center">
+											<div class="product-thumb">
+												<a href="goods_detail.html">
+													<img src="{% static 'images/shop/shop_7.jpg' %}" alt="" />
+												</a>
+												<div class="product-action">
+													<span class="add-to-cart">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+													</span>
+													<span class="wishlist">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a>
+													</span>
+													<span class="quickview">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Quickview"></a>
+													</span>
+													<span class="compare">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Compare"></a>
+													</span>
+												</div>
+											</div>
+											<div class="product-info">
+												<a href="goods_detail.html">
+													<h2 class="title">Chinese Cabbage</h2>
+													<span class="price">$9.00</span>
+												</a>
+											</div>
+										</div>
+										<div class="product-item text-center">
+											<div class="product-thumb">
+												<a href="goods_detail.html">
+													<div class="badges">
+														<span class="hot">Hot</span>
+													</div>
+													<img src="{% static 'images/shop/shop_8.jpg' %}" alt="" />
+												</a>
+												<div class="product-action">
+													<span class="add-to-cart">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+													</span>
+													<span class="wishlist">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Add to wishlist"></a>
+													</span>
+													<span class="quickview">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Quickview"></a>
+													</span>
+													<span class="compare">
+														<a href="#" data-toggle="tooltip" data-placement="top" title="Compare"></a>
+													</span>
+												</div>
+											</div>
+											<div class="product-info">
+												<a href="goods_detail.html">
+													<h2 class="title">Tieton Cherry</h2>
+													<span class="price">$9.00</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-md-pull-9">
+						<div class="sidebar">
+							<div class="widget widget-product-search">
+								<form class="form-search">
+									<input type="text" class="search-field" placeholder="Search products…" value="" name="s" />
+									<input type="submit" value="Search" />
+								</form>
+							</div>
+							<div class="widget widget-product-categories">
+								<h3 class="widget-title">商品分类</h3>
+								<ul class="product-categories">
+									<li><a href="#">特色美食</a> <span class="count">{{ special_goods.count }}</span></li>
+									<li><a href="#">美妆洗护</a> <span class="count">{{ cosmetics_goods.count }}</span></li>
+									<li><a href="#">澳洲奶粉</a> <span class="count">{{ milk_goods.count }}</span></li>
+									<li><a href="#">母婴儿童</a> <span class="count">{{ love_goods.count }}</span></li>
+									<li><a href="#">保健产品</a> <span class="count">{{ care_goods.count }}</span></li>
+									<li><a href="#">其他</a> <span class="count">{{ other_goods.count }}</span></li>
+								</ul>
+							</div>
+                            {% include 'hot_goods_sidebar.html' with title="相关商品" %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% include 'footer_marco.html' %}
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+				</div>
+				<div class="col-md-4">
+					<img src="{% static 'images/footer_payment.png' %}" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="backtotop" id="backtotop"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{% static 'src/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/jquery-migrate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/modernizr-2.7.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/jquery.countdown.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.init.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/dxajax.js' %}"></script>
+<<<<<<< HEAD
+<script type="text/javascript" src="{% static 'src/js/message.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/sweetalert/sweetalert.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/xtalert.js' %}"></script>
+=======
+>>>>>>> master
+<script type="text/javascript" src="{% static 'src/js/user_operation.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+<header class="header header-mobile">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="header-left">
+						<div id="open-left"><i class="ion-navicon"></i></div>
+					</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="header-center">
+						<a href="/" id="logo-2">
+							<img class="logo-image" src="{% static 'images/logo.png' %}" alt="Organik Logo" />
+						</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="header-right">
+						<div class="mini-cart-wrap">
+							<a href="favs.html">
+								<div class="mini-cart">
+									<div class="mini-cart-icon" data-count="{{ request.user.favs.count }}">
+										<i class="ion-bag"></i>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>

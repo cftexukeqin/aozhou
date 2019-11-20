@@ -1,0 +1,247 @@
+﻿{% load  static %}
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<title>Contact Us</title>
+
+<link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/font-awesome.min.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'src/css/ionicons.min.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'src/css/owl.carousel.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/owl.theme.css' %}" type="text/css" media="all">
+<link rel='stylesheet' href="{% static 'src/css/prettyPhoto.css' %}" type='text/css' media='all'>
+<link rel="stylesheet" href="{% static 'src/css/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/custom.css' %}" type="text/css" media="all">
+{#<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">#}
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+ 
+
+<div class="noo-spinner">
+	<div class="spinner">
+		<div class="cube1"></div>
+		<div class="cube2"></div>
+	</div>
+</div>
+{% include 'nav.html' %}
+<div class="site">
+	<div class="topbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="topbar-text">
+						<span>Work time: Monday - Friday: 08AM-06PM</span> 
+						<span>Saturday - Sunday: 10AM-06PM</span>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="topbar-menu">
+						<ul class="topbar-menu">
+							<li class="dropdown">
+								<a href="#">Languages</a>
+								<ul class="sub-menu">
+									<li><a href="#">English</a></li>
+									<li><a href="#">Français</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% include 'header.html' %}
+    {% include 'mobile_header.html' %}
+	<div id="main">
+		<div class="section section-bg-10 pt-11 pb-17">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="page-title text-center">Contact Us</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section border-bottom pt-2 pb-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="breadcrumbs">
+							<li><a href="#">Home</a></li>
+							<li>Contact Us</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section pt-10 pb-10">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="text-center mb-1 section-pretitle">Get in touch</div>
+						<h2 class="text-center section-title mtn-2">HEALTHY ORGANIC FARM</h2>
+						<div class="organik-seperator mb-6 center">
+							<span class="sep-holder"><span class="sep-line"></span></span>
+							<div class="sep-icon"><i class="organik-flower"></i></div>
+							<span class="sep-holder"><span class="sep-line"></span></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div id="googleMap" class="mb-6" data-icon="images/icon_location.png" data-lat="37.789133" data-lon="-122.402158"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="contact-info">
+							<div class="contact-icon">
+								<i class="fa fa-map-marker"></i>
+							</div>
+							<div class="contact-inner">
+								<h6 class="contact-title"> Address</h6>
+								<div class="contact-content">
+									1800 Abbot Kinney Blvd. Unit D &amp; E
+									<br />
+									Venice, CA 90291
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="contact-info">
+							<div class="contact-icon">
+								<i class="fa fa-phone"></i>
+							</div>
+							<div class="contact-inner">
+								<h6 class="contact-title"> Hotline</h6>
+								<div class="contact-content">
+									0122 333 8889
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="contact-info">
+							<div class="contact-icon">
+								<i class="fa fa-envelope"></i>
+							</div>
+							<div class="contact-inner">
+								<h6 class="contact-title"> Email Contact</h6>
+								<div class="contact-content">
+									organik@gmail.com
+									<br />
+									contact@organikstore.com
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="contact-info">
+							<div class="contact-icon">
+								<i class="fa fa-globe"></i>
+							</div>
+							<div class="contact-inner">
+								<h6 class="contact-title"> Website</h6>
+								<div class="contact-content">
+									www.organikstore.com
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<hr class="mt-4 mb-7" />
+						<div class="text-center mb-1 section-pretitle">Leave us a message!</div>
+						<div class="organik-seperator mb-6 center">
+							<span class="sep-holder"><span class="sep-line"></span></span>
+							<div class="sep-icon"><i class="organik-flower"></i></div>
+							<span class="sep-holder"><span class="sep-line"></span></span>
+						</div>
+						<div class="contact-form-wrapper">
+							<form class="contact-form">
+								<div class="row">
+									<div class="col-md-6">
+										<label>your name <span class="required">*</span></label>
+										<div class="form-wrap">
+											<input type="text" name="your-name" value="" size="40" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<label>your email <span class="required">*</span></label>
+										<div class="form-wrap">
+											<input type="email" name="your-email" value="" size="40" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<label>subject</label>
+										<div class="form-wrap">
+											<input type="text" name="your-subject" value="" size="40" />
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<label>message</label>
+										<div class="form-wrap">
+											<textarea name="your-message" cols="40" rows="10"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-wrap text-center">
+											<input type="submit" value="SEND US NOW" />
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% include 'footer_marco.html' %}
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+				</div>
+				<div class="col-md-4">
+					<img src="images/footer_payment.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="backtotop" id="backtotop"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{% static 'src/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/jquery-migrate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/modernizr-2.7.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/jquery.countdown.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.init.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/script.js' %}"></script>
+<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&sensor=false"></script>
+</body>
+</html>
+

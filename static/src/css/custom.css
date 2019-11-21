@@ -701,6 +701,10 @@ Theme Name: Organik
 .pb-7 {
   padding-bottom: 70px !important;
 }
+.pb-7.fav-box {
+  padding-bottom: 0 !important;
+}
+
 
 .pb-8 {
 

@@ -48,3 +48,5 @@ def del_fav(request):
         return restful.paramserror("收藏信息有误！")
 
 
+def test_fav(request):
+    return render(request,'fav/new_Fav.html')

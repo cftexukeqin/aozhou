@@ -8,8 +8,10 @@ from apps.goods.models import Goods
 from apps.operation.models import UserFav
 from utils import restful
 
+
+@login_required(login_url='/user/login/')
 def fav_list(request):
-    favs = UserFav.objects.all()
+    favs = UserFav.objects.filter(user=request.user).order_by('-add_time').all()
     context = {
         'favs':favs
     }

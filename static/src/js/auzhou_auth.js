@@ -25,7 +25,16 @@ Auth.prototype.LoginClick = function(){
                 if(result['code'] === 200){
                     next_url = result['data']['next_url'];
                     if (next_url){
-                        window.location.href ='/'+ next_url
+                        var pattern = RegExp('operation');
+                        var fav_url = pattern.test(next_url);
+                        console.log("&****************************");
+                        console.log(fav_url);
+                        if(fav_url){
+                            window.location.href = "http://" + window.location.host + next_url;
+                        }else {
+                            window.location.href ='/'+ next_url
+                        }
+
                     } else{
                         window.location.href = '/'
                     }

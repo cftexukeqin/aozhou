@@ -15,7 +15,7 @@ def fav_list(request):
     context = {
         'favs':favs
     }
-    return render(request, 'favs.html',context=context)
+    return render(request, 'fav/new_Fav.html',context=context)
 
 
 def userfav(request):
@@ -48,5 +48,5 @@ def del_fav(request):
         return restful.paramserror("收藏信息有误！")
 
 
-def test_fav(request):
-    return render(request,'fav/new_Fav.html')
+# def test_fav(request):
+#     return render(request,'fav/new_Fav.html')

@@ -10,5 +10,5 @@ urlpatterns = [
     # path('search/',views.search,name='search'),
     # path('goods_lists/',views.index_goods_list,name='goods_lists')
     # path('search/',views.search,name='search'),
-    path('goods_lists/',views.index_goods_list,name='goods_lists')
+    # path('goods_lists/',views.index_goods_list,name='goods_lists')
 ]

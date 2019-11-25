@@ -7,11 +7,11 @@ Fav.prototype.ListenRemoveFavEvent =function(){
   removeBtn.click(function (event) {
       event.preventDefault();
       var self = $(this);
-      var td = self.parent();
+      var ptag = self.parent();
       xfzajax.post({
           'url':'/operation/delfav/',
           'data':{
-              'id':td.attr('data-id')
+              'id':ptag.attr('data-id')
           },
           'success':function (result) {
               if (result['code'] === 200){
@@ -39,11 +39,4 @@ Fav.prototype.run = function () {
 $(function () {
     var fav = new Fav();
     fav.run();
-    span_text_change = function () {
-        var goods_nums = $('input[name="number"]').val();
-        var priceTag = $('.goods-price');
-        var spanTag = $('.per-goods-amount');
-        var goods_amount = goods_nums * priceTag.attr('data-price');
-        spanTag.text('￥' + goods_amount.toFixed(1));
-    }
-})
+});

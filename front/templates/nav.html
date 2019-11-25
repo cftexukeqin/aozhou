@@ -3,12 +3,12 @@
 		<ul id="mobile-menu" class="menu">
             <li><a href="{% url 'goods:index' %}">Home</a></li>
             <li><a href="{% url 'goods:lists' %}">商品</a></li>
-            <li><a href="{% url 'operation:fav_list' %}">我的收藏</a></li>
-            <li><a href="{% url 'goods:about' %}">About us</a></li>
+
             {#                                <li><a href="checkout.html">Checkout</a></li>#}
             {#                                <li><a href="contact-us.html">Contact</a></li>#}
             {% if user.is_authenticated %}
                 <li><a href="">{{ user.username }}</a></li>
+                <li><a href="{% url 'operation:fav_list' %}">收藏</a></li>
                 <li><a href="{% url 'users:logout' %}">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'users:login' %}">Login</a></li>

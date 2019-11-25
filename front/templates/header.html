@@ -24,14 +24,12 @@
 							<ul class="main-menu">
                                 <li><a href="{% url 'goods:index' %}">首页</a></li>
                                 <li><a href="{% url 'goods:lists' %}?page=1">商品</a></li>
-                                <li><a href="{% url 'operation:testfav' %}">测试收藏</a></li>
-
-{#                                <li><a href="{% url 'goods:about' %}">About us</a></li>#}
-{#                                <li><a href="checkout.html">Checkout</a></li>#}
-{#                                <li><a href="contact-us.html">Contact</a></li>#}
                                 {% if user.is_authenticated %}
+                                    <li><i class="icon-gouwuche iconfont">
+                                        <a href="{% url 'operation:fav_list' %}"></a>
+                                    </i></li>
                                     <li><a href="#">{{ user.username }}</a></li>
-                                    <li><a href="{% url 'operation:fav_list' %}">我的收藏</a></li>
+                                    <li class="avatar"><img class="avatar" src="{% static 'images/avatar/timg.jpg' %}" alt=""></li>
                                     <li><a href="{% url 'users:logout' %}">退出</a></li>
                                     {% else %}
                                     <li><a href="{% url 'users:login' %}">登录</a></li>
@@ -39,50 +37,6 @@
                                 {% endif %}
 							</ul>
 						</nav>
-{#						<div class="btn-wrap">#}
-{#							<div class="mini-cart-wrap">#}
-{#								<div class="mini-cart">#}
-{#									<div class="mini-cart-icon" data-count="2">#}
-{#										<i class="ion-bag"></i>#}
-{#									</div>#}
-{#								</div>#}
-{#								<div class="widget-shopping-cart-content">#}
-{#									<ul class="cart-list">#}
-{#										<li>#}
-{#											<a href="#" class="remove">×</a>#}
-{#											<a href="goods_detail.html">#}
-{#												<img src="{% static 'images/shop/thumb/shop_1.jpg' %}" alt="" />#}
-{#												Orange Juice&nbsp;#}
-{#											</a>#}
-{#											<span class="quantity">1 × $12.00</span>#}
-{#										</li>#}
-{#										<li>#}
-{#											<a href="#" class="remove">×</a>#}
-{#											<a href="goods_detail.html">#}
-{#												<img src="{% static 'images/shop/thumb/shop_2.jpg' %}" alt="" />#}
-{#												Aurore Grape&nbsp;#}
-{#											</a>#}
-{#											<span class="quantity">1 × $9.00</span>#}
-{#										</li>#}
-{#									</ul>#}
-{#									<p class="total">#}
-{#										<strong>Subtotal:</strong> #}
-{#										<span class="amount">$21.00</span>#}
-{#									</p>#}
-{#									<p class="buttons">#}
-{#										<a href="favs.html" class="view-cart">View cart</a>#}
-{#										<a href="checkout.html" class="checkout">Checkout</a>#}
-{#									</p>#}
-{#								</div>#}
-{#							</div>#}
-{#							<div class="top-search-btn-wrap">#}
-{#								<div class="top-search-btn">#}
-{#									<a href="javascript:void(0);">#}
-{#										<i class="ion-search"></i>#}
-{#									</a>#}
-{#								</div>#}
-{#							</div>#}
-{#						</div>#}
 					</div>
 				</div>
 			</div>

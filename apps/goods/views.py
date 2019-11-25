@@ -22,25 +22,25 @@ def index(request):
         'goods_lists':goods_lists
     }
     return render(request,'index.html',context=context)
-
-def index_goods_list(request):
-    page = int(request.GET.get('p',1))
-    category_id = int(request.GET.get('category_id',0))
-
-
-    start = (page-1)*settings.PERPAGE_GOODS_COUNT
-    end = start+settings.PERPAGE_GOODS_COUNT
-
-    start = (page-1)*settings.PERPAGE_GOODS_COUNT
-    end = start+settings.PERPAGE_GOODS_COUNT
-
-    if category_id == 0:
-        goodses = Goods.objects.all()[start:end]
-    else:
-        goodses = Goods.objects.all()[start:end]
-    serializers = GoodsSerializers(goodses,many=True)
-    data = serializers.data
-    return restful.result(data=data)
+#
+# def index_goods_list(request):
+#     page = int(request.GET.get('p',1))
+#     category_id = int(request.GET.get('category_id',0))
+#
+#
+#     start = (page-1)*settings.PERPAGE_GOODS_COUNT
+#     end = start+settings.PERPAGE_GOODS_COUNT
+#
+#     start = (page-1)*settings.PERPAGE_GOODS_COUNT
+#     end = start+settings.PERPAGE_GOODS_COUNT
+#
+#     if category_id == 0:
+#         goodses = Goods.objects.all()[start:end]
+#     else:
+#         goodses = Goods.objects.all()[start:end]
+#     serializers = GoodsSerializers(goodses,many=True)
+#     data = serializers.data
+#     return restful.result(data=data)
 
 def goods_list(request):
     goodses = Goods.objects.all()[:40]

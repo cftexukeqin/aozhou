@@ -36,41 +36,42 @@
 </head>
 <body>
 
-    <div class="noo-spinner">
-        <div class="spinner">
-            <div class="cube1">123</div>
-            <div class="cube2"></div>
-        </div>
+<div class="noo-spinner">
+    <div class="spinner">
+        <div class="cube1">123</div>
+        <div class="cube2"></div>
     </div>
-    {% include 'nav.html' %}
-    <div class="site">
-        {% include 'header.html' %}
-        {% include 'mobile_header.html' %}
+</div>
+{% include 'nav.html' %}
+<div class="site">
+    {% include 'header.html' %}
+    {% include 'mobile_header.html' %}
 
-        <div id="main">
-{#            <div class="section section-bg-10 pt-11 pb-17">#}
-{#                <div class="container">#}
-{#                    <div class="row">#}
-{#                        <div class="col-sm-12">#}
-{#                            <h2 class="page-title text-center">WISHLIST</h2>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-            <div class="section border-bottom pt-2 pb-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <ul class="breadcrumbs">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li>Cart</li>
-                            </ul>
-                        </div>
+    <div id="main">
+        <div class="section section-bg-10 pt-11 pb-17">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="page-title text-center">WISHLIST</h2>
                     </div>
                 </div>
             </div>
-            <div class="section pt-7 pb-7 fav-box">
+        </div>
+        <div class="section border-bottom pt-2 pb-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="breadcrumbs">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li>Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section pt-7 pb-7 fav-box">
+            {% if favs.count > 0 %}
                 <section class="cartMain">
                     <div class="cartMain_hd">
                         <ul class="order_lists cartTop">
@@ -97,41 +98,47 @@
                                 <label for="shop_a" class="shop"></label>
                             </div>
                             <div class="shop_name">
-                                店铺：<a href="javascript:;">搜猎人艺术生活</a>
+                                店铺：<a href="javascript:;">佳佳的小店</a>
                             </div>
                         </div>
                         <div class="order_content">
-                            <ul class="order_lists">
-                                <li class="list_chk">
-                                    <input type="checkbox" id="checkbox_2" class="son_check">
-                                    <label for="checkbox_2"></label>
-                                </li>
-                                <li class="list_con">
-                                    <div class="list_img"><a href="javascript:;"><img src="{% static 'images/fav/1.png' %}"
-                                                                                      alt=""></a></div>
-                                    <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
-                                </li>
-                                <li class="list_info">
-                                    <p>规格：默认</p>
-                                    <p>尺寸：16*16*3(cm)</p>
-                                </li>
-                                <li class="list_price">
-                                    <p class="price">￥980</p>
-                                </li>
-                                <li class="list_amount">
-                                    <div class="amount_box">
-                                        <a href="javascript:;" class="reduce reSty">-</a>
-                                        <input type="text" value="1" class="sum">
-                                        <a href="javascript:;" class="plus">+</a>
-                                    </div>
-                                </li>
-                                <li class="list_sum">
-                                    <p class="sum_price">￥980</p>
-                                </li>
-                                <li class="list_op">
-                                    <p class="del"><a href="javascript:;" class="remove">移除商品</a></p>
-                                </li>
-                            </ul>
+                            {% for fav in favs %}
+                                <ul class="order_lists">
+                                    <li class="list_chk">
+                                        <input type="checkbox" id="checkbox_2" class="son_check">
+                                        <label for="checkbox_2"></label>
+                                    </li>
+                                    <li class="list_con">
+                                        <div class="list_img"><a href="{% url 'goods:goods_detail' fav.goods.id %}"><img
+                                                src="{{ fav.goods.goods_thumbnail }}"
+                                                alt=""></a></div>
+                                        <div class="list_text"><a
+                                                href="{% url 'goods:goods_detail' fav.goods.id %}">{{ fav.goods.name }}</a>
+                                        </div>
+                                    </li>
+                                    <li class="list_info">
+                                        <p>规格：默认</p>
+                                        <p>尺寸：16*16*3(cm)</p>
+                                    </li>
+                                    <li class="list_price">
+                                        <p class="price">￥{{ fav.goods.shop_price }}</p>
+                                    </li>
+                                    <li class="list_amount">
+                                        <div class="amount_box">
+                                            <a href="javascript:;" class="reduce reSty">-</a>
+                                            <input type="text" value="1" class="sum">
+                                            <a href="javascript:;" class="plus">+</a>
+                                        </div>
+                                    </li>
+                                    <li class="list_sum">
+                                        <p class="sum_price">￥{{ fav.goods.shop_price }}</p>
+                                    </li>
+                                    <li class="list_op">
+                                        <p class="del" data-id="{{ fav.id }}"><a href="javascript:;"
+                                                                                 class="remove">移除商品</a></p>
+                                    </li>
+                                </ul>
+                            {% endfor %}
                         </div>
                     </div>
                     <!--底部-->
@@ -148,41 +155,52 @@
                     <p class="title">删除宝贝<span class="closeModel">X</span></p>
                     <p>您确认要删除该宝贝吗？</p>
                     <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
-                                                                                           class="dialog-close">关闭</a></div>
-                </section>
-            </div>
-        </div>
-        {% include 'footer_marco.html' %}
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        Copyright &copy; 2017.Company name All rights reserved.<a target="_blank"
-                                                                                  href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                                                                                           class="dialog-close">关闭</a>
                     </div>
-                    <div class="col-md-4">
-                        <img src="{% static 'images/footer_payment.png' %}" alt=""/>
+                </section>
+                {% else %}
+                <div class="container">
+                    <div class="empty-tag">
+                        <img src="{% static 'images/ui_empty.png' %}" alt>
+                        <p>暂时是空的
+                            <a href="{% url 'goods:lists' %}">去逛逛</a>
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="backtotop" id="backtotop"></div>
+            {% endif %}
         </div>
     </div>
-    <script type="text/javascript" src="{% static 'src/js/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/jquery-migrate.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/bootstrap.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/modernizr-2.7.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/owl.carousel.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/jquery.countdown.min.js' %}"></script>
-    <script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.js' %}"></script>
-    <script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.init.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/script.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/dxajax.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/sweetalert/sweetalert.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/xtalert.js' %}"></script>
-    <script type="text/javascript" src="{% static 'src/js/fav.js' %}"></script>
+    {% include 'footer_marco.html' %}
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    Copyright &copy; 2017.Company name All rights reserved.<a target="_blank"
+                                                                              href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'images/footer_payment.png' %}" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="backtotop" id="backtotop"></div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'src/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/jquery-migrate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/modernizr-2.7.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/owl.carousel.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/jquery.countdown.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.js' %}"></script>
+<script type='text/javascript' src="{% static 'src/js/jquery.prettyPhoto.init.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/dxajax.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/sweetalert/sweetalert.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/xtalert.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/fav.js' %}"></script>
 {#    <script src="{% static 'src/js/fav/query.min.js' %}"></script>#}
-    <script src="{% static 'src/js/fav/cart.js' %}"></script>
+<script src="{% static 'src/js/fav/cart.js' %}"></script>
 
 </body>
 </html>

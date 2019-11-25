@@ -19,9 +19,15 @@
 						<div class="mini-cart-wrap">
 							<a href="favs.html">
 								<div class="mini-cart">
-									<div class="mini-cart-icon" data-count="{{ request.user.favs.count }}">
-										<i class="ion-bag"></i>
-									</div>
+                                    {% if request.user.favs.count > 0 %}
+                                        <div class="mini-cart-icon" data-count="{{ request.user.favs.count }}">
+                                            <i class="ion-bag"></i>
+                                        </div>
+                                    {% else %}
+                                        <div class="mini-cart-icon" data-count="0">
+                                            <i class="ion-bag"></i>
+                                        </div>
+                                    {% endif %}
 								</div>
 							</a>
 						</div>

@@ -8,6 +8,7 @@
 	<title>Shop</title>
 
 	<link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css'%}" type="text/css" media="all">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1523744_fukomi9u0he.css" type="text/css" media="all">
 	<link rel="stylesheet" href="{% static 'src/css/font-awesome.min.css' %}" type="text/css" media="all" />
 	<link rel="stylesheet" href="{% static 'src/css/ionicons.min.css' %}" type="text/css" media="all" />
 	<link rel="stylesheet" href="{% static 'src/css/owl.carousel.css' %}" type="text/css" media="all">
@@ -45,25 +46,23 @@
 
 	</div>
 	{% include 'nav.html' %}
-	<div id="menu-slideout" class="slideout-menu hidden-md-up">
-		<div class="mobile-menu">
-			<ul id="mobile-menu" class="menu">
-				<li><a href="{% url 'goods:index' %}">首页</a></li>
-				<li><a href="{% url 'goods:lists' %}">商品</a></li>
-				<li><a href="{% url 'operation:fav_list' %}">购物车</a></li>
-				<li><a href="{% url 'goods:about' %}">关于网站</a></li>
-				{#                                <li><a href="checkout.html">Checkout</a></li>#}
-				{#                                <li><a href="contact-us.html">Contact</a></li>#}
-				{% if user.is_authenticated %}
-				<li><a href="">{{ user.username }}</a></li>
-				<li><a href="{% url 'users:logout' %}">Logout</a></li>
-				{% else %}
-				<li><a href="{% url 'users:login' %}">Login</a></li>
-				<li><a href="{% url 'users:regist' %}">Regist</a></li>
-				{% endif %}
-			</ul>
-		</div>
-	</div>
+{#	<div id="menu-slideout" class="slideout-menu hidden-md-up">#}
+{#		<div class="mobile-menu">#}
+{#			<ul id="mobile-menu" class="menu">#}
+{#                <li><a href="{% url 'goods:index' %}">首页</a></li>#}
+{#                <li><a href="{% url 'goods:lists' %}?page=1">商品</a></li>#}
+{#                {% if user.is_authenticated %}#}
+{#                    <li><i class="icon-gouwuche iconfont"></i></li>#}
+{#                    <li><a href="#">{{ user.username }}</a></li>#}
+{#                    <li class="avatar"><img class="avatar" src="{% static 'images/avtar.png' %}" alt=""></li>#}
+{#                    <li><a href="{% url 'users:logout' %}">退出</a></li>#}
+{#                {% else %}#}
+{#                    <li><a href="{% url 'users:login' %}">登录</a></li>#}
+{#                    <li><a href="{% url 'users:regist' %}">注册</a></li>#}
+{#                {% endif %}#}
+{#			</ul>#}
+{#		</div>#}
+{#	</div>#}
 	<div class="site">
 		{% include 'header.html' %}
 		{% include 'mobile_header.html' %}

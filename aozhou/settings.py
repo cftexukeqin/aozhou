@@ -172,3 +172,6 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # 分页显示个数
 AROUND_COUNT = 2
+
+#设置每页显示的数目，默认为20，可以自己修改
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6

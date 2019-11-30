@@ -9,6 +9,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'src/css/bootstrap.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1523744_fukomi9u0he.css" type="text/css" media="all">
     <link rel="stylesheet" href="{% static 'src/css/font-awesome.min.css' %}" type="text/css" media="all"/>
     <link rel="stylesheet" href="{% static 'src/css/ionicons.min.css' %}" type="text/css" media="all"/>
     <link rel="stylesheet" href="{% static 'src/css/owl.carousel.css' %}" type="text/css" media="all">
@@ -112,8 +113,11 @@
                                         <div class="list_img"><a href="{% url 'goods:goods_detail' fav.goods.id %}"><img
                                                 src="{{ fav.goods.goods_thumbnail }}"
                                                 alt=""></a></div>
-                                        <div class="list_text"><a
-                                                href="{% url 'goods:goods_detail' fav.goods.id %}">{{ fav.goods.name }}</a>
+                                        <div class="list_text">
+                                            <a href="{% url 'goods:goods_detail' fav.goods.id %}">
+                                                <p>{{ fav.goods.name }}</p>
+                                                <p class="price_tag">单价：{{ fav.goods.shop_price }}</p>
+                                            </a>
                                         </div>
                                     </li>
                                     <li class="list_info">

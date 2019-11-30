@@ -15,7 +15,7 @@ def fav_list(request):
     context = {
         'favs':favs
     }
-    return render(request, 'fav/new_Fav.html',context=context)
+    return render(request, 'fav/newfav.html', context=context)
 
 
 def userfav(request):
@@ -49,4 +49,4 @@ def del_fav(request):
 
 
 # def test_fav(request):
-#     return render(request,'fav/new_Fav.html')
+#     return render(request,'fav/newfav.html')

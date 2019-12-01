@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from apps.goods.models import Goods
 from django.db.models import Q
+from django.core.cache import cache
+from django.views.decorators.cache import cache_page
 
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from aozhou import settings
@@ -16,6 +18,7 @@ from utils import restful
 # Create your views here.
 
 
+@cache_page(60*3)
 def index(request):
     goods_lists = Goods.objects.all()[:20]
     context = {

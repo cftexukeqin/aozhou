@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="180cff55-5004-4ef4-8ce7-afb898da8dcb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/templates/sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/erweima.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon0701/erweima.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon0701/fanhui.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon0701/kficon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/icon0701/zxicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/qrcode_siderbar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/src/css/sidebar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/src/js/top.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/goods_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/goods_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/goods_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/goods_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aozhou/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/aozhou/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/sidebar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+            <state relative-caret-position="380">
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -57,49 +45,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/templates/search/search.html">
+        <entry file="file://$PROJECT_DIR$/aozhou/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="348" column="75" lean-forward="true" selection-start-line="348" selection-start-column="75" selection-end-line="348" selection-end-column="75" />
+            <state relative-caret-position="190">
+              <caret line="55" column="59" lean-forward="true" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
               <folding>
-                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#307#316#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/src/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="58" column="50" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/src/css/sidebar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/src/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4503">
-              <caret line="258" column="20" lean-forward="true" selection-start-line="258" selection-start-column="20" selection-end-line="258" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -107,17 +59,48 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/goods_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
+            <state relative-caret-position="586">
               <caret line="320" column="64" selection-start-line="320" selection-start-column="64" selection-end-line="320" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/templates/favs.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/templates/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/templates/hot_goods_sidebar.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/goods_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="572">
               <caret line="448" column="60" selection-start-line="448" selection-start-column="60" selection-end-line="448" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="122" column="79" lean-forward="true" selection-start-line="122" selection-start-column="79" selection-end-line="122" selection-end-column="79" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,7 +150,6 @@
         <option value="$PROJECT_DIR$/front/templates/auth_base.html" />
         <option value="$PROJECT_DIR$/static/src/js/auzhou_auth.js" />
         <option value="$PROJECT_DIR$/aozhou.conf" />
-        <option value="$PROJECT_DIR$/aozhou/settings.py" />
         <option value="$PROJECT_DIR$/aozhou_uwsgi.ini" />
         <option value="$PROJECT_DIR$/apps/operation/__init__.py" />
         <option value="$PROJECT_DIR$/apps/operation/apps.py" />
@@ -179,12 +161,13 @@
         <option value="$PROJECT_DIR$/static/src/js/fav.js" />
         <option value="$PROJECT_DIR$/front/templates/search/search.html" />
         <option value="$PROJECT_DIR$/front/templates/footer_marco.html" />
-        <option value="$PROJECT_DIR$/front/templates/index.html" />
         <option value="$PROJECT_DIR$/static/src/js/index.js" />
         <option value="$PROJECT_DIR$/static/src/css/sidebar.css" />
-        <option value="$PROJECT_DIR$/front/templates/sidebar.html" />
         <option value="$PROJECT_DIR$/front/templates/goods_list.html" />
         <option value="$PROJECT_DIR$/front/templates/goods_detail.html" />
+        <option value="$PROJECT_DIR$/front/templates/sidebar.html" />
+        <option value="$PROJECT_DIR$/aozhou/settings.py" />
+        <option value="$PROJECT_DIR$/front/templates/index.html" />
       </list>
     </option>
   </component>
@@ -211,6 +194,11 @@
             <path>
               <item name="aozhou" type="b2602c69:ProjectViewProjectNode" />
               <item name="aozhou" type="462c0819:PsiDirectoryNode" />
+              <item name="aozhou" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aozhou" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aozhou" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -223,6 +211,19 @@
               <item name="aozhou" type="b2602c69:ProjectViewProjectNode" />
               <item name="aozhou" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aozhou" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aozhou" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aozhou" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aozhou" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,12 +297,12 @@
       <updated>1574327303256</updated>
       <workItem from="1575124004031" duration="3243000" />
       <workItem from="1575131561907" duration="2777000" />
-      <workItem from="1575159042942" duration="9298000" />
+      <workItem from="1575159042942" duration="10161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15318000" />
+    <option name="totallyTimeSpent" value="16181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -312,7 +313,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899868" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3084112" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3084112" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,7 +325,7 @@
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32899868" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32899868" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" visible="true" weight="0.32972136" />
-      <window_info anchor="bottom" id="manage.py@aozhou" order="14" visible="true" weight="0.20145379" />
+      <window_info anchor="bottom" id="manage.py@aozhou" order="14" weight="0.20145379" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -408,23 +409,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/favs.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/src/css/fav/carts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7695">
           <caret line="405" column="20" selection-start-line="405" selection-start-column="20" selection-end-line="405" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aozhou/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#307#316#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -518,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/src/js/sweetalert/sweetalert.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -560,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/footer_marco.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/src/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -581,13 +555,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/front/templates/goods_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="348" column="75" lean-forward="true" selection-start-line="348" selection-start-column="75" selection-end-line="348" selection-end-column="75" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="572">
+          <caret line="448" column="60" selection-start-line="448" selection-start-column="60" selection-end-line="448" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/hot_goods_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/footer_marco.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/favs.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/goods_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="320" column="64" selection-start-line="320" selection-start-column="64" selection-end-line="320" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -598,6 +596,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/src/js/top.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -605,24 +610,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/sidebar.html">
+    <entry file="file://$PROJECT_DIR$/aozhou/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+        <state relative-caret-position="190">
+          <caret line="55" column="59" lean-forward="true" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="59" />
+          <folding>
+            <element signature="e#307#316#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/goods_list.html">
+    <entry file="file://$PROJECT_DIR$/front/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="320" column="64" selection-start-line="320" selection-start-column="64" selection-end-line="320" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/goods_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="448" column="60" selection-start-line="448" selection-start-column="60" selection-end-line="448" selection-end-column="60" />
+        <state relative-caret-position="312">
+          <caret line="122" column="79" lean-forward="true" selection-start-line="122" selection-start-column="79" selection-end-line="122" selection-end-column="79" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

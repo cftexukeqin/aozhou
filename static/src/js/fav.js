@@ -29,11 +29,18 @@ Fav.prototype.ListenRemoveFavEvent =function(){
 
 
 };
-
+Fav.prototype.ListenCommitBtn = function(){
+  var commitBtn = $("#goods-commit");
+  commitBtn.click(function (event) {
+      event.preventDefault();
+      xfzalert.alertInfoWithTitle("vx：Daisy_6116",'添加管理员微信购买！')
+  })
+};
 
 
 Fav.prototype.run = function () {
     this.ListenRemoveFavEvent();
+    this.ListenCommitBtn();
 };
 
 $(function () {

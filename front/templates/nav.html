@@ -8,7 +8,10 @@
             {#                                <li><a href="contact-us.html">Contact</a></li>#}
             {% if user.is_authenticated %}
                 <li><a href="">{{ user.username }}</a></li>
-                <li><a href="{% url 'operation:fav_list' %}">收藏</a></li>
+                {% if user.is_staff %}
+                    <li><a href="/xadmin">后台管理</a></li>
+                {% endif %}
+                <li><a href="{% url 'operation:fav_list' %}">我的收藏</a></li>
                 <li><a href="{% url 'users:logout' %}">Logout</a></li>
             {% else %}
                 <li><a href="{% url 'users:login' %}">Login</a></li>

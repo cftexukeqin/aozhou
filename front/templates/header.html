@@ -27,6 +27,9 @@
                                 {% if user.is_authenticated %}
                                     <li><a href="{% url 'operation:fav_list' %}"><i class="icon-gouwuche iconfont"></i></a></li>
                                     <li><a href="#">{{ user.username }}</a></li>
+                                    {% if user.is_staff %}
+                                        <li><a href="/xadmin">后台管理</a></li>
+                                    {% endif %}
                                     <li class="avatar"><img class="avatar" src="{% static 'images/avatar/timg.jpg' %}" alt=""></li>
                                     <li><a href="{% url 'users:logout' %}">退出</a></li>
                                     {% else %}

@@ -16,6 +16,7 @@
 <link rel='stylesheet' href="{% static 'src/css/slick.css' %}" type='text/css' media='all'>
 <link rel="stylesheet" href="{% static 'src/css/style.css' %}" type="text/css" media="all">
 <link rel="stylesheet" href="{% static 'src/css/custom.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'src/css/sidebar.css' %}" type="text/css" media="all">
 <link rel="stylesheet" href="{% static 'src/js/sweetalert/sweetalert.css' %}" type="text/css" media="all">
 {#<link href="http://fonts.googleapis.com/css?family=Great+Vibes%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">#}
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,6 +27,7 @@
 <![endif]-->
 </head>
 <body>
+{% include 'sidebar.html' %}
 <div class="noo-spinner">
 	<div class="spinner">
 		<div class="cube1"></div>
@@ -440,12 +442,10 @@
 <script type='text/javascript' src="{% static 'src/js/slick.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'src/js/script.js' %}"></script>
 <script type="text/javascript" src="{% static 'src/js/dxajax.js' %}"></script>
-<<<<<<< HEAD
 <script type="text/javascript" src="{% static 'src/js/message.js' %}"></script>
 <script type="text/javascript" src="{% static 'src/js/sweetalert/sweetalert.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'src/js/xtalert.js' %}"></script>
-=======
->>>>>>> master
 <script type="text/javascript" src="{% static 'src/js/user_operation.js' %}"></script>
+<script type="text/javascript" src="{% static 'src/js/top.js' %}"></script>
 </body>
 </html>

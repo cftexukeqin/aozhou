@@ -7,7 +7,6 @@ Index.prototype.ListenCategory = function(){
     var productItems = $(".product-item");
     $.each(productItems,function (index,element) {
         var catTag = element.dataset.category;
-        console.log(catTag);
         if (catTag=== "1"){
             element.className += " special"
         }else if (catTag === "2"){
@@ -58,7 +57,6 @@ Index.prototype.ListenUserFavClick = function(){
     // var goods_id = $('#user-fav').data('goods');
     userfavBtn.click(function (event) {
         var id = userfavBtn.attr('data-goods-id');
-        console.log("id",id);
         xfzajax.get({
             'url':'/operation/userfav/',
             "data":{

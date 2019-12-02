@@ -18,7 +18,7 @@ from utils import restful
 # Create your views here.
 
 
-@cache_page(60*3)
+# @cache_page(60*3)
 def index(request):
     goods_lists = Goods.objects.all()[:20]
     context = {
